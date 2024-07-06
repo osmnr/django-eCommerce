@@ -1,0 +1,156 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Cta CSS
+----------------------------------------*/
+
+.cta-section{
+    @include background;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    .overlay{
+        background: #E53E3E;
+        mix-blend-mode: multiply;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.cta-wrap{
+    span{
+        font-size: 14px;
+        color: var(--rr-color-common-white);
+        margin-bottom: 35px;
+        display: inline-block;
+        text-transform: uppercase;
+        line-height: 1;
+        @include breakpoint(sm){
+            margin-bottom: 25px;
+        }
+    }
+    .title{
+        color: var(--rr-color-common-white);
+        font-size: 60px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+        @include breakpoint(md){
+            font-size: 44px;
+        }
+        @include breakpoint(sm){
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+    }
+    .cta-btn{
+        background-color: var(--rr-color-common-white);
+        color: var(--rr-color-theme-primary);
+        &:before{
+            background-color: var(--rr-color-heading-primary);
+        }
+        &:hover{
+            color: var(--rr-color-common-white);
+        }
+    }
+}
+
+// Cta 2
+
+.product-cta{
+    .container{
+        padding: 0;
+    }
+}
+
+
+.cta-wrap-2{
+    background-color: #E3B695;
+    padding: 60px;
+    position: relative;
+    z-index: 1;
+    @include breakpoint(sm){
+        padding: 30px 20px;
+    }
+    .bg-men{
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        img{
+            height: 100%;
+        }
+        @include breakpoint(lg){
+            right: -30%;
+        }
+        @include breakpoint(md){
+            right: -50%;
+        }
+        @include breakpoint(sm){
+            display: none;
+        }
+    }
+    span{
+        background-color: var(--rr-color-theme-green);
+        color: var(--rr-color-common-white);
+        font-size: 14px;
+        font-weight: 600;
+        display: inline-block;
+        padding: 0 10px;
+        padding-right: 0;
+        position: relative;
+        z-index: 1;
+        overflow-y: clip;
+        border-radius: 4px;
+        margin-bottom: 15px;
+        &:before{
+            background-color: var(--rr-color-theme-green);
+            content: "";
+            width: 25px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: -10px;
+            transform: rotate(45deg);
+            z-index: -1;
+            border-radius: 4px;
+        }
+    }
+    .title{
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        @include breakpoint(sm){
+            font-size: 28px;
+        }
+    }
+    p{
+        font-size: 18px;
+        color: var(--rr-color-heading-primary);
+        margin-bottom: 25px;
+    }
+    .cta-btn{
+        background-color: var(--rr-color-common-white);
+        color: var(--rr-color-heading-primary);
+        padding: 5px 15px;
+        border-radius: 100px;
+        display: inline-flex;
+        align-items: center;
+        column-gap: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: capitalize;
+        i{
+            color: var(--rr-color-theme-green);
+        }
+    }
+}
+
+/* !END: Cta CSS */

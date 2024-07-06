@@ -1,0 +1,90 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Promo CSS
+----------------------------------------*/
+.promo-item{
+    background-color: var(--rr-color-grey-1);
+    padding: 50px;
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    @include breakpoint(lg){
+        padding: 30px 20px;
+    }
+    .promo-content{
+        .category{
+            color: var(--rr-color-theme-secondary);
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        .title{
+            color: var(--rr-color-heading-primary);
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .code{
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--rr-color-text-body);
+            margin-bottom: 20px;
+            span{
+                color: var(--rr-color-text-body);
+                color: var(--rr-color-theme-secondary);
+                font-weight: 700;
+                text-decoration: underline;
+            }
+        }
+        .promo-btn{
+            background-color: var(--rr-color-common-white);
+            color: var(--rr-color-theme-secondary);
+            border: 1px solid var(--rr-color-theme-secondary);
+            border-radius: 6px;
+            &:before{
+                background-color: var(--rr-color-theme-secondary);
+            }
+            &:hover{
+                color: var(--rr-color-common-white);
+            }
+        }
+        .rr-product-countdown-inner{
+            margin-top: 80px;
+            @include breakpoint(sm){
+                margin-top: 40px;
+            }
+            ul{
+                @include flex-vertical-center;
+                li{
+                    &:not(:last-of-type){
+                        margin-bottom: 0;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .promo-img{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        @include breakpoint(lg){
+            right: -50px;
+        }
+        @include breakpoint(sm){
+            display: none;
+        }
+    }
+    &.item-2{
+        .promo-content{
+            .code{
+                color: var(--rr-color-heading-primary);
+            }
+        }
+    }
+}
+
+/* !END: Promo CSS */

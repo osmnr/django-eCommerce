@@ -1,0 +1,73 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Page Header CSS
+----------------------------------------*/
+.page-header{
+    background-color: #F3F3F3;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .shape{
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+
+.page-header-content{
+    padding: 130px 0 100px;
+    position: relative;
+    z-index: 2;
+    @include flex-vertical-center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    @include breakpoint(md){
+        padding: 100px 0 100px 0;
+    }
+    @include breakpoint(sm){
+        flex-direction: column;
+    }
+    .title{
+        font-size: 60px;
+        font-weight: 600;
+        line-height: 1;
+        display: inline-block;
+        @include breakpoint(md){
+            font-size: 48px;
+        }
+        @include breakpoint(sm){
+            font-size: 29px;
+        }
+    }
+    .sub-title{
+        @include flex-vertical-center;
+        column-gap: 17px;
+        .home{
+            color: var(--rr-color-text-body);
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .icon{
+            font-size: 16px;
+            color: var(--rr-color-text-body);
+            line-height: 1;
+        }
+        .inner{
+            font-size: 18px;
+            color: var(--rr-color-heading-primary);
+            font-weight: 600;
+        }
+    }
+}
+
+/* !END: Page Header CSS */

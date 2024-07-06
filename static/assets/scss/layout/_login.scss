@@ -1,0 +1,128 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Login CSS
+----------------------------------------*/
+.login-wrap{
+    background-color: var(--rr-color-grey-1);
+    max-width: 725px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 120px;
+    border-radius: 6px;
+    @include breakpoint(sm){
+        padding: 40px 20px;
+    }
+    .title{
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    .google-login{
+        background-color: var(--rr-color-common-white);
+        color: var(--rr-color-heading-primary);
+        padding: 14px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        display: block;
+        width: 100%;
+        @include flex-vertical-center;
+        justify-content: center;
+        column-gap: 10px;
+        img{
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .or-text{
+        color: var(--rr-color-heading-primary);
+        font-weight: 600;
+        display: block;
+        margin: 40px 0;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        &:before{
+            background-color: var(--rr-color-border-1);
+            content: "";
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: -2;
+        }
+        &:after{
+            background-color: var(--rr-color-grey-1);
+            content: "";
+            width: 50px;
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+    }
+}
+
+.login-form{
+    .form-item{
+        margin-bottom: 25px;
+        .form-header{
+            font-size: 14px;
+            font-weight: 500;
+            display: block;
+            text-align: left;
+        }
+        .form-control{
+            box-shadow: none;
+            padding: 14px 20px;
+            border: 1px solid var(--rr-color-border-1);
+            border-radius: 6px;
+        }
+        .checkbox-wrap{
+            display: block;
+            text-align: left;
+            @include flex-vertical-center;
+            input{
+                accent-color: var(--rr-color-theme-primary);
+                margin-right: 10px;
+            }
+            label{
+                cursor: pointer;
+                span{
+                    color: var(--rr-color-heading-primary);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .submit-btn{
+        margin-bottom: 20px;
+        .rr-primary-btn{
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    .login-btn-wrap{
+        @include flex-vertical-center;
+        column-gap: 10px;
+    }
+    .forgot{
+        color: var(--rr-color-heading-primary);
+        font-weight: 500;
+        text-align: left;
+        display: block;
+    }
+    
+    .log-in{
+        color: var(--rr-color-theme-primary);
+        font-weight: 500;
+        display: block;
+        text-align: left;
+    }
+}
+
+/* !END: Login CSS */

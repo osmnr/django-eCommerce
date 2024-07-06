@@ -1,0 +1,52 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Food CSS
+----------------------------------------*/
+.food-wrap{
+    background-color: var(--rr-color-grey-1);
+    padding: 40px;
+    margin: 0;
+    @include breakpoint(sm){
+        padding: 20px;
+    }
+}
+
+.food-item{
+    background-color: var(--rr-color-common-white);
+    padding: 20px;
+    border: 1px solid rgba(26, 26, 26, 0.08);
+    .food-img{
+        height: 90px;
+        max-width: 110px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        img{
+            @include transition(all 0.3s ease-in-out);
+            object-fit: inherit;
+        }
+    }
+    .title{
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 0;
+        span{
+            color: var(--rr-color-theme-green);
+            font-size: 12px;
+            font-weight: 500;
+            display: block;
+            margin-top: 7px;
+        }
+    }
+    &:hover{
+        .food-img{
+            img{
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+
+
+/* !END: Food CSS */

@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+
+        <!-- Site Title -->
+        <title>eCommerce Template</title>
+
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png'%}">
+
+        <!-- CSS here -->
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css'%}">
+        <link rel="stylesheet" href="{% static 'assets/css/fontawesome.min.css'%}">
+        <link rel="stylesheet" href="{% static 'assets/css/venobox.min.css'%}">
+        <link rel="stylesheet" href="{% static 'assets/css/odometer.min.css'%}">
+        <link rel="stylesheet" href="{% static 'assets/css/nice-select.css'%}">
+        <link rel="stylesheet" href="{% static 'assets/css/swiper.min.css'%}">
+        <link rel="stylesheet" href="{% static 'assets/css/main.css'%}">
+    </head>
+    <body>
+    {% include 'components/header.html'%}
+    {% include 'components/popupsearchbar.html'%}
+    {% include 'components/mobilesidemenu.html'%}
+    {% include 'components/preloader.html'%}
+
+            {% block mainContent %}    
+            <!-- Main content of the pages will come here -->
+            {% endblock mainContent %}
+
+    {% include 'components/footer.html'%}  
+
+        <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>
+        <!--scrollup-->
+
+        <!-- JS here -->
+        <script src="{%static 'assets/js/vendor/jquary-3.6.0.min.js'%}"></script>
+        <script src="{%static 'assets/js/vendor/bootstrap-bundle.js'%}"></script>
+        <script src="{%static 'assets/js/vendor/imagesloaded-pkgd.js'%}"></script>
+        <script src="{%static 'assets/js/vendor/waypoints.min.js'%}"></script>
+        <script src="{%static 'assets/js/vendor/venobox.min.js'%}"></script>
+        <script src="{%static 'assets/js/vendor/odometer.min.js'%}"></script>
+        <script src="{%static 'assets/js/vendor/meanmenu.js'%}"></script>
+        <script src="{%static 'assets/js/vendor/smooth-scroll.js'%}"></script>
+        <script src="{%static 'assets/js/vendor/jquery.isotope.js'%}"></script>
+        <script src="{%static 'assets/js/vendor/countdown.js'%}"></script>
+        <script src="{%static 'assets/js/vendor/swiper.min.js'%}"></script>
+        <script src="{%static 'assets/js/vendor/nice-select.js'%}"></script>
+        <script src="{%static 'assets/js/ajax-form.js'%}"></script>
+        <script src="{%static 'assets/js/contact.js'%}"></script>
+        <script src="{%static 'assets/js/main.js'%}"></script>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: FAQ CSS
+----------------------------------------*/
+
+.faq-content{
+    .accordion-item{
+        border: 1px solid var(--rr-color-border-1);
+        &:not(:last-of-type){
+            margin-bottom: 20px;
+        }
+        .accordion-header{
+            .accordion-button{
+                background-color: var(--rr-color-common-white);
+                box-shadow: none;
+                font-size: 16px;
+                font-weight: 500;
+                color: var(--rr-color-heading-primary);
+            }
+        }
+        .accordion-body{
+            padding-top: 0px;
+            color: var(--rr-color-text-body)
+        }
+    }
+}
+
+.faq-form{
+    background-color: var(--rr-color-grey-1);
+    padding: 40px;
+    @include breakpoint(md){
+        margin-top: 30px;
+    }
+    @include breakpoint(sm){
+        padding: 30px 20px;
+    }
+    .form-item{
+        &:not(:last-of-type){
+            margin-bottom: 20px;
+        }
+        .form-control{
+            background-color: var(--rr-color-common-white);
+            border: 1px solid var(--rr-color-border-1);
+            box-shadow: none;
+            padding: 14.5px 20px;
+        }
+    }
+    .submit-btn{
+        .submit{
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}
+
+/* !END: FAQ CSS */

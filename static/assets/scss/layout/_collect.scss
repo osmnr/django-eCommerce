@@ -1,0 +1,84 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Collect CSS
+----------------------------------------*/
+.collect-item{
+    background-color: var(--rr-color-grey-2);
+    height: 100%;
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    span{
+        background-color: var(--rr-color-common-white);
+        color: var(--rr-color-theme-primary);
+        padding: 6px 15px;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+    .title{
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .collect-list{
+        list-style: none;
+        margin-top: 30px;
+        li{
+            font-size: 16px;
+            color: var(--rr-color-heading-primary);
+            line-height: 1;
+            &:not(:last-of-type){
+                margin-bottom: 20px;
+            }
+        }
+    }
+    p{
+        font-size: 14px;
+    }
+    .men{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        @include breakpoint(sm){
+            display: none;
+        }
+    }
+    .shapes{
+        .shape{
+            position: absolute;
+            z-index: -2;
+            &.shape-1{
+                top: 50%;
+                right: 20%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+.collect-items{
+    .collect-item{
+        &:not(:last-of-type){
+            margin-bottom: 24px;
+        }
+        &.item-1{
+            background-color: #e9e9e9;
+            .men{
+                height: 100%;
+            }
+        }
+        &.item-2{
+            background-color: #e5dcd7;
+            .men{
+                height: 100%;
+            }
+        }
+    }
+}
+
+/* !END: Collect CSS */

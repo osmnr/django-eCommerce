@@ -1,0 +1,67 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Team CSS
+----------------------------------------*/
+
+
+.team-section{
+    background-color: #F6F6F6;
+}
+
+.team-item{
+    .team-thumb{
+        height: 350px;
+        border-radius: 6px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            @include transition(all 0.3s ease-in-out);
+        }
+    }
+    .team-content{
+        text-align: center;
+        padding-top: 30px;
+        span{
+            font-size: 12px;
+            color: var(--rr-color-text-body);
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+        .title{
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--rr-color-border-1);
+        }
+        .team-social{
+            li{
+                display: inline-flex;
+                &:not(:last-of-type){
+                    margin-right: 10px;
+                }
+                a{
+                    color: var(--rr-color-heading-primary);
+                    font-size: 14px;
+                    font-weight: 500;
+                    display: block;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    &:hover{
+        .team-thumb{
+            img{
+                transform: scale(1.03);
+            }
+        }
+    }
+}
+
+/* !END: Team CSS */

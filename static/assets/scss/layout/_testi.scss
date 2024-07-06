@@ -1,0 +1,88 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Testimonail CSS
+----------------------------------------*/
+.testimonial-section{
+    background-color: var(--rr-color-theme-third);
+}
+
+.testi-item-wrap{
+    .testi-item{
+        background-color: var(--rr-color-common-white);
+        padding: 40px 35px;
+        border-radius: 6px;
+        position: relative;
+        margin-bottom: 40px;
+        .shape{
+            position: absolute;
+            bottom: -21px;
+            left: 60px;
+        }
+        .testi-top-content{
+            @include flex-vertical-center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            row-gap: 15px;
+            margin-bottom: 20px;
+            .title{
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 0;
+            }
+            .review{
+                display: flex;
+                align-items: center;
+                list-style: none;
+                column-gap: 5px;
+                li{
+                    color: var(--rr-color-theme-third);
+                    font-size: 14px;
+                }
+            }
+        }
+        p{
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+    }
+    .testi-author{
+        @include flex-vertical-center;
+        column-gap: 15px;
+        padding-left: 30px;
+        img{
+            width: 50px;
+            height: 50px;
+        }
+        .name{
+            color: var(--rr-color-common-white);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 0;
+            span{
+                margin-top: 5px;
+                display: block;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.about-testi{
+    background-color: var(--rr-color-theme-primary);
+}
+
+.testi-item-wrap{
+    .testi-item-2{
+        .testi-top-content{
+            .review{
+                li{
+                    color: var(--rr-color-theme-primary);
+                }
+            }
+        }
+    }
+}
+
+/* !END: Testimonail CSS */

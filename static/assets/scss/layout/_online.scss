@@ -1,0 +1,72 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Online CSS
+----------------------------------------*/
+
+.online-area{
+    background-color: var(--rr-color-theme-third);
+}
+
+.online-area{
+    position: relative;
+    z-index: 1;
+    .bg-img{
+        @include background;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 45%;
+        height: 100%;
+        @include breakpoint(md){
+            width: 0;
+        }
+    }
+}
+
+.online-content{
+    .section-heading{
+        margin-bottom: 40px;
+    }
+}
+
+.online-items{
+    .online-item{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 80px 1fr;
+        grid-gap: 20px;
+        @include breakpoint(sm){
+            grid-template-columns: 1fr;
+        }
+        &:not(:last-of-type){
+            margin-bottom: 30px;
+        }
+        .icon{
+            background-color: var(--rr-color-common-white);
+            @include flex-center;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            img{
+                height: 38px;
+                width: 38px;
+                margin: 0 auto;
+            }
+        }
+        .content{
+            .title{
+                font-size: 20px;
+                color: var(--rr-color-common-white);
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+            p{
+                color: var(--rr-color-common-white);
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+/* !END: Online CSS */

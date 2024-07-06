@@ -1,0 +1,179 @@
+    {% load static%}
+    <!-- header-area-start -->
+    <header class="header sticky-active">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-inner">
+                    <div class="top-bar-left">
+                        <ul class="top-left-list">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">My Account</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                        </ul>
+                    </div>
+                    <div class="top-bar-middle">
+                        <span>Free shipping for all orders of 150$</span>
+                    </div>
+                    <div class="top-bar-right">
+                        <ul class="top-right-list">
+                            <li><a href="contact.html">Store Location</a></li>
+                            <li>
+                                <div class="nice-select select-control country" tabindex="0">
+                                    <span class="current">Language</span>
+                                    <ul class="list">
+                                        <li data-value="" class="option selected focus">Language</li>
+                                        <li data-value="vdt" class="option">English</li>
+                                        <li data-value="can" class="option">Bangla</li>
+                                        <li data-value="uk" class="option">Arabic</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="nice-select select-control select-2 country" tabindex="0">
+                                    <span class="current">Currency</span>
+                                    <ul class="list">
+                                        <li data-value="" class="option selected focus">Currency</li>
+                                        <li data-value="vdt" class="option">Doller</li>
+                                        <li data-value="can" class="option">Rupee</li>
+                                        <li data-value="uk" class="option">Taka</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle">
+            <div class="container">
+                <div class="header-middle-inner">
+                    <div class="header-middle-left">
+                        <div class="header-logo d-lg-block">
+                            <a href="index.html">
+                                <img src="{% static 'assets/img/logo/logo-1.png' %}" alt="Logo">
+                            </a>
+                        </div>
+                        <div class="category-form-wrap">
+                            <div class="nice-select select-control country" tabindex="0">
+                                <span class="current">ALL Categories</span>
+                                <ul class="list">
+                                    <li data-value="" class="option selected focus">ALL Categories</li>
+                                    <li data-value="vdt" class="option">Fashion</li>
+                                    <li data-value="can" class="option">Organic</li>
+                                    <li data-value="uk" class="option">Furniture</li>
+                                </ul>
+                            </div>
+                            <form class="header-form" action="mail.php">
+                                <input class="form-control" type="text" name="search" placeholder="Search here...">
+                                <button class="submit rr-primary-btn">Search here</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="header-middle-right">
+                        <ul class="contact-item-list">
+                            <li>
+                                <div class="content">
+                                    <span>Call Us Now:</span>
+                                    <a class="number" href="tel:+25821592159">+(258) 2159-2159</a>
+                                </div>
+                                <a href="#" class="icon">
+                                    <i class="fa-regular fa-phone"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="wishlist.html" class="icon">
+                                    <i class="fa-sharp fa-regular fa-heart"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="cart.html" class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                    <span>2</span>
+                                </a>
+                                <div class="content">
+                                    <span>Your cart,</span>
+                                    <h5 class="number">$1280.00</h5>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="primary-header">
+            <div class="container">
+                <div class="primary-header-inner">
+                    <div class="header-logo mobile-logo">
+                        <a href="index.html">
+                            <img src="assets/img/logo/logo-1.png" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="header-menu-wrap">
+                        <div class="mobile-menu-items">
+                            <ul>
+                                <li class="menu-item-has-children active">
+                                    <a href="index.html">Home</a>
+                                    <ul>
+                                        <li><a href="index.html">Fashion Home</a></li>
+                                        <li><a href="index-2.html">Grocery Home</a></li>
+                                        <li><a href="index-3.html">Furniture</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="shop.html">Shop</a>
+                                    <ul>
+                                        <li><a href="shop.html">Shop</a></li>
+                                        <li><a href="shop-grid.html">Shop Grid</a></li>
+                                        <li><a href="shop-details.html">Shop Details</a></li>
+                                        <li><a href="cart.html">Cart</a></li>
+                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                        <li><a href="checkout.html">Checkout</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="shop-grid.html">Women</a>
+                                </li>
+                                <li>
+                                    <a href="shop-grid.html">men</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Pages</a>
+                                    <ul>
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="login.html">Login</a></li>
+                                        <li><a href="register.html">Register</a></li>
+                                        <li><a href="faq.html">Faq</a></li>
+                                        <li><a href="error.html">404 Error</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="blog-grid.html">Blog</a>
+                                    <ul>
+                                        <li><a href="blog-grid.html">Blog Grid</a></li>
+                                        <li><a href="blog-grid-2.html">Blog list</a></li>
+                                        <li><a href="blog-details.html">Blog Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.header-menu-wrap -->
+                    <div class="header-right-wrap">
+                        <div class="header-right">
+                            <span>Get 30% Discount Now <span>Sale</span></span>
+                            <div class="header-right-item">
+                                <a href="javascript:void(0)" class="mobile-side-menu-toggle"
+                                    ><i class="fa-sharp fa-solid fa-bars"></i
+                                ></a>
+                            </div>
+                        </div>
+                        <!-- /.header-right -->
+                    </div>
+                </div>
+                <!-- /.primary-header-inner -->
+            </div>
+        </div>
+    </header>
+    <!-- /.Main Header -->

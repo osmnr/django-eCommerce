@@ -1,0 +1,59 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Category CSS
+----------------------------------------*/
+
+.category-top{
+    .swiper-arrow{
+        @include flex-vertical-center;
+        column-gap: 15px;
+        .swiper-nav{
+            background-color: var(--rr-color-grey-1);
+            height: 45px;
+            width: 45px;
+            @include flex-center;
+            color: var(--rr-color-text-body);
+            border-radius: 50%;
+            @include transition(all 0.3s ease-in-out);
+            &:hover{
+                background-color: var(--rr-color-theme-primary);
+                color: var(--rr-color-common-white);
+            }
+        }
+    }
+}
+
+.category-item{
+    background-color: var(--rr-color-grey-1);
+    padding: 10px 10px 15px 10px;
+    border-radius: 6px;
+    text-align: center;
+    @include transition(all 0.3s ease-in-out);
+    .category-img{
+        img{
+            border-radius: 6px;
+        }
+    }
+    .title{
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 15px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        a{
+            @include transition(all 0.4s ease-in-out);
+        }
+    }
+    &:hover{
+        background-color: var(--rr-color-theme-primary);
+        .title{
+            a{
+                color: var(--rr-color-common-white);
+            }
+        }
+    }
+}
+
+
+/* !END: Category CSS */

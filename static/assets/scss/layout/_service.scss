@@ -1,0 +1,58 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Service CSS
+----------------------------------------*/
+
+.service-item{
+    .service-img{
+        height: 300px;
+        @include breakpoint(lg){
+            max-width: 465px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    .top-area{
+        height: 300px;
+    }
+    .service-content{
+        max-width: 350px;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 50px;
+        .number{
+            background-color: var(--rr-color-common-white);
+            color: var(--rr-color-heading-primary);
+            font-size: 14px;
+            font-weight: 700;
+            display: inline-block;
+            @include flex-center;
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            margin: 0 auto;
+            border: 1px solid #ECECEC;
+            box-shadow: 0px 13px 37px rgba(0, 0, 0, 0.08);
+        }
+        .title{
+            font-size: 24px;
+            font-weight: 600;
+            margin: 20px 0 15px 0;
+            text-transform: uppercase;
+        }
+        p{
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    &.item-2{
+        .service-content{
+            padding-bottom: 0;
+        }
+    }
+}
+
+
+/* !END: Service CSS */

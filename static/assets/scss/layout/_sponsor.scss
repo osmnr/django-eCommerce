@@ -1,0 +1,41 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Sponsor CSS
+----------------------------------------*/
+
+.sponsor-wrap{
+    border: 1px solid var(--rr-color-border-1);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    @include breakpoint(sm){
+        grid-template-columns: repeat(2, 1fr);
+        border: none;
+        border: 1px solid var(--rr-color-border-1);
+    }
+}
+
+.sponsor-item{
+    background-color: var(--rr-color-common-white);
+    text-align: center;
+    @include transition(all 0.3s ease-in-out);
+    @include flex-center;
+    padding: 50px 50px;
+    @include breakpoint(sm){
+        border: none;
+        border-bottom: 1px solid var(--rr-color-border-1);
+    }
+    @include breakpoint(md){
+        padding: 50px 30px;
+    }
+    img{
+        height: auto;
+        width: auto;
+        object-fit: inherit;
+    }
+    &:hover{
+        box-shadow: 0px 14px 43px rgba(147, 151, 160, 0.15);
+    }
+}
+
+/* !END: Sponsor CSS */

@@ -1,0 +1,376 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Footer CSS
+----------------------------------------*/
+
+.footer-items{
+    background-color: var(--rr-color-common-white);
+    @include flex-vertical-center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 20px;
+    padding: 30px 40px;
+    border-radius: 6px;
+    margin-bottom: 50px;
+    .footer-item{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 35px 1fr;
+        grid-gap: 15px; 
+        position: relative;
+        &:before{
+            background-color: var(--rr-color-border-1);
+            content: "";
+            width: 1px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            right: -25%;
+            transform: translateY(-50%);
+            @include breakpoint(lg){
+                display: none;
+            }
+        }
+        .icon{
+            max-width: 35px;
+            width: 100%;
+        }
+        .content{
+            .title{
+                line-height: 1;
+            }
+            span{
+                display: block;
+                line-height: 1;
+                @include breakpoint(sm){
+                    line-height: 1.2;
+                }
+            }
+        }
+        &.item-2{
+            &:before{
+                display: none;
+            }
+        }
+    }
+}
+
+.footer-widget-wrap{
+    @include breakpoint(md){
+        padding-bottom: 0;
+    }
+}
+
+.footer-widget {
+    @include breakpoint(md) {
+        margin-bottom: 80px;
+    }
+    @include breakpoint(md){
+        margin-bottom: 60px;
+    }
+    @include breakpoint(sm){
+        margin-bottom: 50px;
+    }
+    .widget-header {
+        margin-bottom: 25px;
+        .footer-logo{
+            max-width: 170px;
+        }
+        .widget-title{
+            color: var(--rr-color-heading-primary);
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+    .footer-contact{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 50px 1fr;
+        grid-gap: 15px;
+        @include breakpoint(lg){
+            grid-template-columns: 1fr;
+        }
+        .icon{
+            background-color: var(--rr-color-common-white);
+            color: var(--rr-color-theme-primary);
+            height: 50px;
+            width: 50px;
+            @include flex-center;
+            border-radius: 50%;
+        }
+        .content{
+            span{
+                display: block;
+                margin-bottom: 5px;
+            }
+            a{
+                color: var(--rr-color-theme-primary);
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 1;
+            }
+        }
+    }
+    .schedule-list{
+        margin-top: 20px;
+        list-style: none;
+        li{
+            font-size: 16px;
+            color: var(--rr-color-heading-primary);
+            font-weight: 500;
+            &:not(:last-of-type){
+                margin-bottom: 5px;
+            }
+            span{
+                color: var(--rr-color-text-body);
+                font-weight: 400;
+                margin-right: 10px;
+            }
+        }
+    }
+    .footer-list {
+        list-style: none;
+        li {
+            a {
+                font-family: var(--rr-ff-body);
+                color: var(--rr-color-text-body);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 1;
+                &:hover {
+                    color: var(--rr-color-theme-primary);
+                }
+            }
+            &:not(:last-of-type) {
+                margin-bottom: 10px;
+            }
+        }
+        &.arrow-left{
+            li{
+                a{
+                    position: relative;
+                    padding-left: 20px;
+                    &:before{
+                        background-image: none;
+                        font-family: "Font Awesome 6 Pro";
+                        font-size: 12px;
+                        font-weight: 700;
+                        content: "\f061";
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                    }
+                    &:hover{
+                        color: var(--rr-color-heading-primary);
+                    }
+                }
+            }
+        }
+        &.social{
+            li{
+                i{
+                    width: 30px;
+                }
+            }
+        }
+    }
+    .footer-form{
+        position: relative;
+        .form-control{
+            background-color: var(--rr-color-common-white);
+            padding: 15px 132px 15px 15px;
+            color: var(--rr-color-text-body);
+            box-shadow: none;
+            border: 1px solid var(--rr-color-border-1);
+            border-radius: 2px;
+            @include tp-placeholder{
+                color: var(--rr-color-text-body);
+            }
+        }
+        .submit{
+            background-color: var(--rr-color-theme-primary);
+            color: var(--rr-color-common-white);
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            height: 36px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0 20px;
+            border-radius: 4px;
+        }
+    }
+    .address-list {
+        list-style: none;
+        margin-bottom: 30px;
+        li {
+            font-family: var(--rr-ff-body);
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            column-gap: 10px;
+            &:not(:last-of-type) {
+                margin-bottom: 15px;
+            }
+            i {
+                color: var(--rr-color-theme-primary);
+                line-height: 1;
+                margin-top: 6px;
+            }
+            a {
+                border-bottom: 1px solid transparent;
+                &:hover {
+                    color: var(--rr-color-theme-primary);
+                    border-bottom: 1px solid var(--rr-color-theme-primary)
+                }
+            }
+        }
+    }
+    .social-list {
+        @include flex-vertical-center;
+        list-style: none;
+        li {
+            a {
+                background-color: transparent;
+                color: var(--rr-color-common-white);
+                font-size: 14px;
+                height: 40px;
+                width: 40px;
+                border-radius: 0;
+                display: block;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                @include flex-center;
+                &:hover {
+                    background-color: var(--rr-color-theme-primary);
+                    color: var(--rr-color-common-white);
+                }
+            }
+            &:not(:last-of-type) {
+                margin-right: 10px;
+            }
+        }
+    }
+    .form-check{
+        margin-top: 30px;
+        .form-check-input{
+            background-color: var(--rr-color-border-1);
+            border: none;
+            box-shadow: none;
+            height: 17px;
+            width: 17px;
+            &:checked[type=checkbox]{
+                box-shadow: none;
+            }
+        }
+        .form-check-label{
+            font-size: 14px;
+            font-weight: 400;
+            cursor: pointer;
+        }
+    }
+    &.footer-col-2{
+        padding-left: 70px;
+        @include breakpoint(md){
+            padding-left: 0;
+        }
+        .footer-list{
+            li{
+                a{
+                    position: relative;
+                    padding-left: 30px;
+                    &:before{
+                        background-image: none;
+                        font-family: "Font Awesome 6 Pro";
+                        font-size: 14px;
+                        font-weight: 700;
+                        content: "\f356";
+                        color: var(--rr-color-text-body);
+                        position: absolute;
+                        top: 55%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        transition: all 0.3s ease-in-out;
+                        cursor: pointer;
+                    }
+                    &:hover{
+                        &:before{
+                            color: var(--rr-color-theme-primary);
+                            left: 5px; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.widget-3{
+        padding-left: 30px;
+        @include breakpoint(md){
+            padding-left: 0;
+        }
+    }
+    &.footer-col-4{
+        .footer-form{
+            .submit{
+                position: inherit;
+                transform: translate(0);
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.copyright-content {
+    border-top: 1px solid var(--rr-color-border-1);
+    padding: 20px 0;
+    align-items: center;
+    @include breakpoint(md) {
+        margin-top: 0;
+    }
+    @include breakpoint(sm) {
+        row-gap: 20px;
+        padding: 40px 0;
+    }
+    p {
+        color: var(--rr-color-heading-primary);
+        font-size: 16px;
+        margin: 0;
+        text-align: right;
+        span {
+            color: var(--rr-color-theme-primary);
+        }
+        @include breakpoint(md){
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+    .footer-img-wrap{
+        @include flex-vertical-center;
+        @include breakpoint(md){
+            justify-content: center;
+        }
+        @include breakpoint(sm){
+            flex-direction: column;
+            row-gap: 10px;
+        }
+        span{
+            color: var(--rr-color-heading-primary);
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .footer-img{
+            margin-left: 10px;
+            img{
+                max-width: 265px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+/* !END: Theme Footer CSS */

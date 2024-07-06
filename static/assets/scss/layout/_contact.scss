@@ -1,0 +1,84 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Contact CSS
+----------------------------------------*/
+
+.contact-wrap{
+    background-color: var(--rr-color-grey-1);
+    padding: 60px;
+    @include breakpoint(sm){
+        padding: 50px 10px;
+    }
+}
+
+.blog-contact-form.form-2{
+    border-radius: 6px;
+    .form-title{
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 40px;
+        text-transform: capitalize;
+    }
+    .form-item{
+        &:not(:last-of-type){
+            margin-bottom: 30px;
+        }
+        .form-header{
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            color: var(--rr-color-text-body);
+        }
+    }
+}
+
+.contact-content{
+    background-color: var(--rr-color-common-white);
+    padding: 40px;
+    border: 1px solid var(--rr-color-border-1);
+    border-radius: 6px;
+    max-width: 465px;
+    width: 100%;
+    @include breakpoint(md){
+        margin-top: 40px;
+    }
+    @include breakpoint(lg){
+        padding: 40px 20px;
+    }
+    .contact-img{
+        margin-bottom: 30px;
+        img{
+            @include breakpoint(md){
+                width: 100%;
+            }
+        }
+    }
+    .contact-info-box{
+        &:not(:last-of-type){
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--rr-color-border-1);
+        }
+        .title{
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        ul{
+            list-style: none;
+            li{
+                &:not(:last-of-type){
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+.map-wrapper{
+    margin-bottom: -10px;
+}
+
+/* !END: Theme Contact CSS */

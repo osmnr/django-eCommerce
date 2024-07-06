@@ -1,0 +1,100 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Furniture CSS
+----------------------------------------*/
+
+.furniture-shop{
+    .section-heading{
+        margin-bottom: 20px;
+        .section-title{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.furniture-filter{
+    @include flex-center;
+    column-gap: 20px;
+    list-style: none;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    li{
+        color: var(--rr-color-heading-primary);
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+        &.active{
+            color: var(--rr-color-theme-third);
+        }
+    }
+}
+
+.ft-shop-item{
+    background-color: var(--rr-color-common-white);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    .new{
+        background-color: var(--rr-color-theme-third);
+        color: var(--rr-color-common-white);
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        @include flex-center;
+        height: 55px;
+        width: 55px;
+        border-radius: 50%;
+    }
+    .furniture-img{
+        padding: 100px 20px 30px 20px;
+        
+        img{
+            height: 185px;
+            max-width: 185px;
+            width: 100%;
+            margin: 0 auto;
+            object-fit: inherit;
+            @include transition(all 0.3s ease-in-out);
+        }
+    }
+    .shop-content{
+        text-align: left;
+        border: none;
+        padding: 20px 30px 30px 30px;
+        .title{
+            text-transform: uppercase;
+        }
+        .review-wrap{
+            margin-top: 5px;
+        }
+    }
+    &:hover{
+        .furniture-img{
+            img{
+                transform: scale(1.02);
+            }
+        }
+    }
+}
+
+.shop-popular-wrap{
+    background-color: var(--rr-color-grey-1);
+    padding: 60px;
+    @include breakpoint(md){
+        padding: 30px;
+    }
+    @include breakpoint(sm){
+        padding: 20px 0;
+    }
+    .section-heading{
+        .section-title{
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* !END: Furniture CSS */
